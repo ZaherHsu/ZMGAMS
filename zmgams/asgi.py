@@ -11,7 +11,7 @@ import os
 
 from django.core.asgi import get_asgi_application
 from utils.websocket import websocket_application
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'greaterwms.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'zmgams.settings')
 
 http_application = get_asgi_application()
 

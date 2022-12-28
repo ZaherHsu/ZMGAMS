@@ -74,7 +74,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'greaterwms.urls'
+ROOT_URLCONF = 'zmgams.urls'
 
 TEMPLATES = [
     {
@@ -93,7 +93,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'greaterwms.wsgi.application'
+WSGI_APPLICATION = 'zmgams.wsgi.application'
 CSRF_COOKIE_SAMESITE = None
 
 # Database

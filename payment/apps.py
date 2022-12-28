@@ -22,10 +22,10 @@ class PaymentConfig(AppConfig):
 #             init_data = [
 #                 transporationfee(openid='init_data', send_city='上海市', receiver_city='杭州市',
 #                                  weight_fee=0.4, volume_fee=30, transportation_supplier='WanKe Logistic',
-#                                  min_payment=250, creater='GreaterWMS'),
+#                                  min_payment=250, creater='ZMGAMS'),
 #                 transporationfee(openid='init_data', send_city='上海市', receiver_city='北京市',
 #                                  weight_fee=0.8, volume_fee=220, transportation_supplier='WanKe Logistic',
-#                                  min_payment=250, creater='GreaterWMS'),
+#                                  min_payment=250, creater='ZMGAMS'),
 #             ]
 #             transporationfee.objects.bulk_create(init_data, batch_size=100)
 #     except:

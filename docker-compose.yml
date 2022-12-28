@@ -12,8 +12,8 @@ services:
     ports:
       - '8080:8080'
     volumes:
-      - ./templates:/GreaterWMS/templates:rw
-      - ./web_start.sh:/GreaterWMS/templates/webstart.sh
+      - ./templates:/ZMGAMS/templates:rw
+      - ./web_start.sh:/ZMGAMS/templates/webstart.sh
     command:
       - /bin/bash
       - -c
@@ -30,7 +30,7 @@ services:
     image: greaterwms/greaterwms_backend:latest
     restart: always
     volumes:
-      - ./:/GreaterWMS/:rw #将前目录挂载到容器下
+      - ./:/ZMGAMS/:rw #将前目录挂载到容器下
       - ./supervisord.conf:/etc/supervisor/supervisord.conf
     ports:
       - '8000:8000'
@@ -43,9 +43,9 @@ services:
         bash backend_start.sh && /etc/init.d/supervisor start
     networks:
       - basic
-#  greaterwms-mysql:
+#  zmgams-mysql:
 #    image: mysql:5.7
-#    container_name: greaterwms-mysql
+#    container_name: zmgams-mysql
 #    #使用该参数，container内的root拥有真正的root权限，否则，container内的root只是外部的一个普通用户权限
 #    #设置为true，不然数据卷可能挂载不了，启动不起
 #    privileged: true
@@ -54,7 +54,7 @@ services:
 #      - "3306:3306"
 #    environment:
 #      MYSQL_ROOT_PASSWORD: "GreaterWMS20210816"
-#      MYSQL_DATABASE: "greaterwms"
+#      MYSQL_DATABASE: "zmgams"
 #      TZ: Asia/Shanghai
 #    command:
 #      --wait_timeout=31536000
@@ -81,6 +81,6 @@ services:
 #     volumes:
 #       - /etc/localtime:/etc/localtime:ro
 #       - ./nginx.conf:/etc/nginx/nginx.conf:ro
-#       - ./static_new/:/GreaterWMS/static_new:ro
+#       - ./static_new/:/ZMGAMS/static_new:ro
 #     networks:
 #       - basic

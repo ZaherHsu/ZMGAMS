@@ -43,5 +43,5 @@ If applicable, add screenshots to help explain your problem.
 
 **Version Information**
 <!---
-You can get this by going to the "About GreaterWMS" section in the upper right corner and clicking on to the "copy version information"
+You can get this by going to the "About ZMGAMS" section in the upper right corner and clicking on to the "copy version information"
 --->

@@ -1,5 +1,5 @@
 import mimetypes, os, requests, django
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'greaterwms.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'zmgams.settings')
 os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
 django.setup()
 from django.conf import settings
@@ -64,4 +64,4 @@ if not supplier_en_file:
     df = supplier_en.set_index("Supplier Name")
     df.to_excel(supplier_en_path)
 
-print('Welcome To GreaterWMS')
+print('Welcome To ZMGAMS')

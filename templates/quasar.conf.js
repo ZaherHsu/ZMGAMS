@@ -86,7 +86,7 @@ module.exports = function (/* ctx */) {
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
     framework: {
       iconSet: 'material-icons', // Quasar icon set
-      lang: 'en-us', // Quasar language pack
+      lang: 'zh-hans', // Quasar language pack
       config: {},
 
       // Possible values for "importStrategy":
@@ -162,8 +162,8 @@ module.exports = function (/* ctx */) {
       workboxOptions: {}, // only for GenerateSW
       manifest: {
         name: 'wms templates',
-        short_name: 'GreaterWMS--Open Source Warehouse Management System',
-        description: 'GreaterWMS--Open Source Warehouse Management System',
+        short_name: 'ZMGAMS--Open Source Warehouse Management System',
+        description: 'ZMGAMS--Open Source Warehouse Management System',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
@@ -228,8 +228,8 @@ module.exports = function (/* ctx */) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'com.electron.greaterwms',
-        productName: 'GreaterWMS',
+        appId: 'com.electron.zmgams',
+        productName: 'ZMGAMS',
         copyright: '2022SR0153577',
         publish: [
           {
@@ -259,12 +259,12 @@ module.exports = function (/* ctx */) {
           ]
         },
         nsis: {
-          uninstallDisplayName: 'GreaterWMS',
+          uninstallDisplayName: 'ZMGAMS',
           oneClick: false,
           allowToChangeInstallationDirectory: true,
           createDesktopShortcut: true,
           createStartMenuShortcut: true,
-          shortcutName: 'GreaterWMS',
+          shortcutName: 'ZMGAMS',
           runAfterFinish: true
         },
         compression: 'maximum'

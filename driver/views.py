@@ -12,6 +12,7 @@ from django.http import StreamingHttpResponse
 from .files import FileRenderCN, FileRenderEN
 from rest_framework.settings import api_settings
 
+
 class APIViewSet(viewsets.ModelViewSet):
     """
         retrieve:
@@ -69,7 +70,8 @@ class APIViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         data = self.request.data
         data['openid'] = self.request.auth.openid
-        if ListModel.objects.filter(openid=self.request.auth.openid, driver_name=data['driver_name'], is_delete=False).exists():
+        if ListModel.objects.filter(openid=self.request.auth.openid, driver_name=data['driver_name'],
+                                    is_delete=False).exists():
             raise APIException({"detail": "Data Exists"})
         else:
             serializer = self.get_serializer(data=data)
@@ -113,6 +115,7 @@ class APIViewSet(viewsets.ModelViewSet):
             headers = self.get_success_headers(serializer.data)
             return Response(serializer.data, status=200, headers=headers)
 
+
 class DispatchListViewSet(viewsets.ModelViewSet):
     """
         retrieve:
@@ -149,8 +152,9 @@ class DispatchListViewSet(viewsets.ModelViewSet):
         else:
             return self.http_method_not_allowed(request=self.request)
 
+
 class FileDownloadView(viewsets.ModelViewSet):
-    renderer_classes = (FileRenderCN, ) + tuple(api_settings.DEFAULT_RENDERER_CLASSES)
+    renderer_classes = (FileRenderCN,) + tuple(api_settings.DEFAULT_RENDERER_CLASSES)
     filter_backends = [DjangoFilterBackend, OrderingFilter, ]
     ordering_fields = ['id', "create_time", "update_time", ]
     filter_class = Filter
@@ -200,5 +204,6 @@ class FileDownloadView(viewsets.ModelViewSet):
             renderer,
             content_type="text/csv"
         )
-        response['Content-Disposition'] = "attachment; filename='driverlist_{}.csv'".format(str(dt.strftime('%Y%m%d%H%M%S%f')))
+        response['Content-Disposition'] = "attachment; filename='driverlist_{}.csv'".format(
+            str(dt.strftime('%Y%m%d%H%M%S%f')))
         return response

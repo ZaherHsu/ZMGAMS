@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class ListModel(models.Model):
     driver_name = models.CharField(max_length=255, verbose_name="Driver Name")
     license_plate = models.CharField(max_length=255, verbose_name="License Plate")
@@ -11,10 +12,11 @@ class ListModel(models.Model):
     update_time = models.DateTimeField(auto_now=True, blank=True, null=True, verbose_name="Update Time")
 
     class Meta:
-        db_table = 'driver'
-        verbose_name = 'Driver'
-        verbose_name_plural = "Driver"
-        ordering = ['driver_name']
+        db_table = 'driver'  # 数据表名称
+        verbose_name = 'Driver'  # 单数名称
+        verbose_name_plural = "Driver"  # 复数名称
+        ordering = ['driver_name']  # 对象默认的顺序
+
 
 class DispatchListModel(models.Model):
     driver_name = models.CharField(max_length=255, verbose_name="Driver Name")

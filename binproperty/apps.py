@@ -20,18 +20,18 @@ def init_category():
             if ls.objects.filter(openid__iexact='init_data').count() != 4:
                 ls.objects.filter(openid__iexact='init_data').delete()
                 init_data = [
-                    ls(id=1, openid='init_data', bin_property='Damage', creater='GreaterWMS'),
-                    ls(id=2, openid='init_data', bin_property='Inspection', creater='GreaterWMS'),
-                    ls(id=3, openid='init_data', bin_property='Normal', creater='GreaterWMS'),
-                    ls(id=4, openid='init_data', bin_property='Holding', creater='GreaterWMS')
+                    ls(id=1, openid='init_data', bin_property='Damage', creater='ZMGAMS'),
+                    ls(id=2, openid='init_data', bin_property='Inspection', creater='ZMGAMS'),
+                    ls(id=3, openid='init_data', bin_property='Normal', creater='ZMGAMS'),
+                    ls(id=4, openid='init_data', bin_property='Holding', creater='ZMGAMS')
                 ]
                 ls.objects.bulk_create(init_data, batch_size=100)
         else:
             init_data = [
-                ls(id=1, openid='init_data', bin_property='Damage', creater='GreaterWMS'),
-                ls(id=2, openid='init_data', bin_property='Inspection', creater='GreaterWMS'),
-                ls(id=3, openid='init_data', bin_property='Normal', creater='GreaterWMS'),
-                ls(id=4, openid='init_data', bin_property='Holding', creater='GreaterWMS')
+                ls(id=1, openid='init_data', bin_property='Damage', creater='ZMGAMS'),
+                ls(id=2, openid='init_data', bin_property='Inspection', creater='ZMGAMS'),
+                ls(id=3, openid='init_data', bin_property='Normal', creater='ZMGAMS'),
+                ls(id=4, openid='init_data', bin_property='Holding', creater='ZMGAMS')
             ]
             ls.objects.bulk_create(init_data, batch_size=100)
     except:

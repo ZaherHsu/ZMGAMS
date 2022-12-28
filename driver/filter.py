@@ -1,6 +1,7 @@
 from django_filters import FilterSet
 from .models import ListModel, DispatchListModel
 
+
 class Filter(FilterSet):
     class Meta:
         model = ListModel
@@ -14,6 +15,7 @@ class Filter(FilterSet):
             "create_time": ['year', 'month', 'day', 'week_day', 'gt', 'gte', 'lt', 'lte', 'range'],
             "update_time": ['year', 'month', 'day', 'week_day', 'gt', 'gte', 'lt', 'lte', 'range']
         }
+
 
 class DispatchFilter(FilterSet):
     class Meta:
