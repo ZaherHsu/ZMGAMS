@@ -21,7 +21,7 @@
 ![NodeJS](https://img.shields.io/badge/NodeJS-14.19.3-yellowgreen)
 </div>
 
-[//]: # (Some Link)
+<!-- [//]: # (Some Link)
 ## :rocket: 找到我们
 <h4>
     <a href="https://www.56yhz.com/">官网首页</a>
@@ -37,14 +37,14 @@
 </h4>
 <h4>
   <a href="https://github.com/Singosgu/GreaterWMS/blob/master/README.md">英文文档</a>
-</h4>
+</h4> -->
 
-[//]: # (About the Project)
+<!-- [//]: # (About the Project)
 ### :star2: 关于此项目
 
 该库存管理系统是，目前福特亚太区售后物流仓储供应链流程。
 离开福特后，我开始了这个项目。 为了帮助一些有需要的人。
-OneAPP 理念。 支持扫描设备PDA、手机APP、桌面exe、网站等。
+OneAPP 理念。 支持扫描设备PDA、手机APP、桌面exe、网站等。 -->
 
 [//]: # (Function)
 ## :dart: 模块
