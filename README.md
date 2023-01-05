@@ -2,7 +2,6 @@
   <!-- <img src="static/img/logo.png" alt="ZMGAMS logo" width="200" height="auto" /> -->
   <h1>ZMGAMS</h1>
   <!-- <p>Zhejiang Media Group Advanced Management System</p>
-  <p>浙江广播电视集团</p> -->
 
 <!-- Badges -->
 [![License: APLv2](https://img.shields.io/github/license/GreaterWMS/GreaterWMS)](https://opensource.org/licenses/Apache-2.0/)
